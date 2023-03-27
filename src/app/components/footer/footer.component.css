@@ -1,0 +1,71 @@
+footer {
+  background-color: #ff99ff;
+  border-top: 0.75rem solid #663300;
+  border-bottom: 0.75rem solid #663300;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 3rem;
+}
+
+.contato {
+  color: #663300;
+  font-family: "Alkatra", cursive;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.whatsapp,
+.email {
+  color: #663300;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.whatsapp:before {
+  background-image: url("../../../assets/images/whatsapp.png");
+  background-size: 1.75rem 1.75rem;
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  content: "";
+}
+
+.email:before {
+  background-image: url("../../../assets/images/email.png");
+  background-size: 1.75rem 1.75rem;
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  content: "";
+}
+
+.redes-sociais {
+  color: #663300;
+  font-family: "Alkatra", cursive;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.icones-redes {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.pagamento {
+  color: #663300;
+  font-family: "Alkatra", cursive;
+  font-size: 1.5rem;
+}
+
+.metodos-pagamento {
+  margin-top: 1rem;
+}
