@@ -5,13 +5,18 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 3rem;
+  padding: 1rem 1rem;
 }
 
-a {
+.logo {
+  height: 250px;
+  width: 250px;
+}
+
+nav a {
   color: #663300;
   font-family: "Alkatra", cursive;
   font-size: 1.75rem;
-  margin: 2rem;
+  margin-right: 2rem;
   text-decoration: none;
 }
