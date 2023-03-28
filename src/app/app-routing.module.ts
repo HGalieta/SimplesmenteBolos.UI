@@ -1,3 +1,4 @@
+import { BolosConfeitadosComponent } from './components/bolos-confeitados/bolos-confeitados.component';
 import { HomeComponent } from './components/home/home.component';
 import { EncomendasComponent } from './components/encomendas/encomendas.component';
 import { NgModule } from '@angular/core';
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  {
+    path: 'bolosConfeitados',
+    component: BolosConfeitadosComponent
+  }
   {
     path: 'encomendas',
     component: EncomendasComponent,
