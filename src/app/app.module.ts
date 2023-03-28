@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { EncomendasComponent } from './components/encomendas/encomendas.component';
 import { HomeComponent } from './components/home/home.component';
+import { BolosConfeitadosComponent } from './components/bolos-confeitados/bolos-confeitados.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
     FooterComponent,
     EncomendasComponent,
     HomeComponent,
+    BolosConfeitadosComponent
   ],
   imports: [
     BrowserModule,
