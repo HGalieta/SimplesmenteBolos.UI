@@ -1,0 +1,40 @@
+section {
+  text-align: center;
+  background-color: #ffe5cc;
+  padding: 1rem 0;
+}
+
+.info {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #663300;
+  font-family: "Alkatra", cursive;
+}
+
+.link {
+  font-size: 1.25rem;
+  text-decoration: none;
+  background-color: #663300;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+}
+
+.link:hover {
+  background-color: #331a00;
+  color: #ffb3d9;
+}
+
+.subtitulo {
+  margin-top: 1rem;
+  color: #663300;
+  font-family: "Alkatra", cursive;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.img-bolo {
+  height: 250px;
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
