@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { EncomendasComponent } from './components/encomendas/encomendas.component';
 import { HomeComponent } from './components/home/home.component';
 import { BolosConfeitadosComponent } from './components/bolos-confeitados/bolos-confeitados.component';
+import { BolosCaseirosComponent } from './components/bolos-caseiros/bolos-caseiros.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { BolosConfeitadosComponent } from './components/bolos-confeitados/bolos-
     FooterComponent,
     EncomendasComponent,
     HomeComponent,
-    BolosConfeitadosComponent
+    BolosConfeitadosComponent,
+    BolosCaseirosComponent
   ],
   imports: [
     BrowserModule,
