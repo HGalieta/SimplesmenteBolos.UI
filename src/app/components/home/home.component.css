@@ -1,0 +1,11 @@
+main {
+  background-color: #ffe5cc;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.img-bolo {
+  height: 250px;
+  margin-right: 1rem;
+  border-radius: 1rem;
+}
