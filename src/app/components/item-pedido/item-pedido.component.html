@@ -1,0 +1,11 @@
+<div class="order-item">
+  Bolo {{ orderItem.tipo }} de {{ orderItem.sabor }}. Tamanho:
+  {{ orderItem.tamanho }} fatias
+  <button
+    type="button"
+    (click)="removeProduct($event, orderItem.id)"
+    id="remove"
+  >
+    X
+  </button>
+</div>
