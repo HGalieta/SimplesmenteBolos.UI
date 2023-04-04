@@ -1,7 +1,37 @@
-<main>
+<section>
   <a
     href="https://api.whatsapp.com/send?phone=5521997508542"
     class="btn-whatsapp"
     >Faça aqui sua encomenda pelo WhatsApp</a
   >
-</main>
+  <form action="post">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" />
+
+    <label for="tel">Telefone:</label>
+    <input type="tel" id="tel" />
+    <label for="tel-c">Confirme o telefone:</label>
+    <input type="tel" id="tel-c" />
+
+    <select name="products" id="products">
+      <option value="">Escolha seu bolo</option>
+      <optgroup label="Bolos Caseiros">
+        <option value="">Laranja</option>
+        <option value="">Cenoura</option>
+        <option value="">Maçã com Canela</option>
+      </optgroup>
+      <optgroup label="Bolos Confeitados">
+        <option value="">No Acetato</option>
+        <option value="">Com Chantininho</option>
+      </optgroup>
+    </select>
+    <button id="btnProduto" type="button" (click)="addProduct()">
+      Incluir
+    </button>
+  </form>
+  <div *ngIf="order.length > 0">
+    <div *ngFor="let orderItem of order">
+      <app-item-pedido [orderItem]="orderItem"></app-item-pedido>
+    </div>
+  </div>
+</section>
