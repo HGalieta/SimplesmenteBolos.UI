@@ -1,13 +1,18 @@
-main {
+section {
+  background-color: #ffe5cc;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .btn-whatsapp {
   background-color: #25d366;
-  color: #ece5dd;
-  padding: 1rem 2rem;
   border: 4px solid #128c7e;
   border-radius: 8px;
+  color: #ece5dd;
+  font-family: "Alkatra", cursive;
+  font-size: 1.25rem;
+  padding: 0.5rem 2rem;
+  text-decoration: none;
 }
 
 .btn-whatsapp:hover {
