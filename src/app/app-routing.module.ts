@@ -4,6 +4,7 @@ import { HomeComponent } from './components/home/home.component';
 import { EncomendasComponent } from './components/encomendas/encomendas.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ConfirmacaoComponent } from './components/confirmacao/confirmacao.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: 'encomendas',
     component: EncomendasComponent,
+  },
+  {
+    path: 'confirmacao',
+    component: ConfirmacaoComponent,
   },
 ];
 

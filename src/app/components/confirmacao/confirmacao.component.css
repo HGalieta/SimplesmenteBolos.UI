@@ -1,0 +1,11 @@
+section {
+  background-color: #ffe5cc;
+  padding: 3rem 0 2rem 0;
+  text-align: center;
+}
+
+.texto-confirmacao {
+  color: #663300;
+  font-family: "Alkatra", cursive;
+  font-size: 2rem;
+}
