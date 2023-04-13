@@ -40,3 +40,10 @@ section {
   height: 250px;
   margin-right: 1rem;
 }
+
+@media screen and (max-width: 990px) {
+  .info {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

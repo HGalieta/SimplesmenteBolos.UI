@@ -60,6 +60,11 @@ footer {
   margin-top: 1rem;
 }
 
+.logo-rede {
+  width: 5rem;
+  height: 5rem;
+}
+
 .pagamento {
   color: #663300;
   font-family: "Alkatra", cursive;
@@ -68,4 +73,44 @@ footer {
 
 .metodos-pagamento {
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 990px) {
+  footer {
+    flex-direction: column;
+  }
+
+  .contato,
+  .whatsapp,
+  .email,
+  .redes-sociais,
+  .pagamento {
+    font-size: 1.25rem;
+  }
+
+  .whatsapp,
+  .email {
+    margin: 0.5rem 0;
+  }
+
+  .icones-redes {
+    gap: 1rem;
+  }
+
+  .logo-rede {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .metodos-pagamento p {
+    text-align: center;
+    margin: 0.25rem 0;
+  }
 }

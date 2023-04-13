@@ -85,3 +85,9 @@ section {
   background-color: #331a00;
   color: #ffb3d9;
 }
+
+@media screen and (max-width: 490px) {
+  .btn-whatsapp {
+    padding: 0.5rem 1rem;
+  }
+}

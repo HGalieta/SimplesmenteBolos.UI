@@ -5,7 +5,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 1rem 1rem;
+  padding: 1rem;
 }
 
 .logo {
@@ -19,4 +19,27 @@ nav a {
   font-size: 1.75rem;
   margin-right: 2rem;
   text-decoration: none;
+}
+
+@media screen and (max-width: 990px) {
+  .logo {
+    height: 200px;
+    width: 200px;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 503px) {
+  header {
+    padding: 0.375rem;
+  }
+
+  nav a {
+    font-size: 1.25rem;
+  }
 }
