@@ -1,25 +1,20 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { OrderItem } from './itemPedido';
+import { Pedido } from './pedido';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PedidoService {
-  private readonly API = 'https://localhost:7268/ItemPedido';
+  private readonly API = 'https://localhost:7268/Pedido';
 
   constructor(private http: HttpClient) {}
 
-  listOrder(): Observable<OrderItem[]> {
-    return this.http.get<OrderItem[]>(this.API);
-  }
-
-  addItemToOrder(orderItem: OrderItem): Observable<OrderItem> {
-    return this.http.post<OrderItem>(this.API, orderItem);
-  }
-
-  removeItem(itemId: any) {
-    return this.http.delete(`${this.API}/${itemId}`);
+  realizaPedido(pedido: Pedido): Observable<Pedido> {
+    console.log(JSON.stringify(pedido));
+    return this.http.post<Pedido>(this.API, JSON.stringify(pedido), {
+      headers: new HttpHeaders({ 'Content-Type': 'application/json' }),
+    });
   }
 }
