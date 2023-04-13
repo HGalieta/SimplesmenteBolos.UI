@@ -1,6 +1,6 @@
 section {
   background-color: #ffe5cc;
-  padding: 2rem 0;
+  padding: 3rem 0 2rem 0;
   text-align: center;
 }
 
@@ -18,4 +18,70 @@ section {
 .btn-whatsapp:hover {
   background-color: #ece5dd;
   color: #25d366;
+}
+
+.formulario {
+  margin-top: 2rem;
+}
+
+.cliente-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label-nome {
+  margin-right: 1rem;
+}
+
+.label-email {
+  margin-right: 1.25rem;
+}
+
+.inputs-titulo {
+  font-family: "Alkatra", cursive;
+  font-size: 1.5rem;
+  margin: 1rem;
+  color: #663300;
+}
+
+.input-label {
+  font-family: "Alkatra", cursive;
+  font-size: 1.25rem;
+  color: #663300;
+}
+
+.produto-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-inputs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tipo,
+.sabor,
+.tamanho {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.btn {
+  background-color: #663300;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Alkatra", cursive;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  padding: 0.375rem 1rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #331a00;
+  color: #ffb3d9;
 }

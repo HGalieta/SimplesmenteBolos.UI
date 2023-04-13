@@ -4,34 +4,150 @@
     class="btn-whatsapp"
     >Faça aqui sua encomenda pelo WhatsApp</a
   >
-  <form action="post">
-    <label for="name">Nome:</label>
-    <input type="text" id="name" />
+  <form class="formulario" action="post">
+    <div class="cliente-inputs">
+      <p class="inputs-titulo">Seus dados:</p>
+      <div>
+        <label for="nome" class="input-label label-nome">Nome:&nbsp;</label>
+        <input
+          type="text"
+          id="nome"
+          name="nome"
+          placeholder="Seu nome"
+          required
+          [(ngModel)]="pedido.cliente.nome"
+        />
+      </div>
+      <div>
+        <label for="tel" class="input-label">Telefone:&nbsp;</label>
+        <input
+          type="tel"
+          id="tel"
+          name="telefone"
+          placeholder="Seu telefone"
+          required
+          [(ngModel)]="pedido.cliente.telefone"
+        />
+      </div>
+      <div>
+        <label for="email" class="input-label label-email">Email:&nbsp;</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Seu e-mail"
+          required
+          [(ngModel)]="pedido.cliente.email"
+        />
+      </div>
+    </div>
+    <div class="produto-inputs">
+      <p class="inputs-titulo">Escolha seus bolos:</p>
+      <div class="radio-inputs">
+        <div class="tipo">
+          <div>
+            <input
+              type="radio"
+              name="tipo"
+              value="caseiro"
+              id="caseiro"
+              [(ngModel)]="itemPedido.tipo"
+            />
+            <label for="caseiro" class="input-label">Caseiro</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="tipo"
+              value="confeitado"
+              id="confeitado"
+              [(ngModel)]="itemPedido.tipo"
+            />
+            <label for="confeitado" class="input-label">Confeitado</label>
+          </div>
+        </div>
+        <div class="sabor">
+          <div>
+            <input
+              type="radio"
+              name="sabor"
+              value="laranja"
+              id="laranja"
+              [(ngModel)]="itemPedido.sabor"
+            />
+            <label for="laranja" class="input-label">Laranja</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="sabor"
+              value="chocolate"
+              id="chocolate"
+              [(ngModel)]="itemPedido.sabor"
+            />
+            <label for="chocolate" class="input-label">Chocolate</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="sabor"
+              value="abacaxi"
+              id="abacaxi"
+              [(ngModel)]="itemPedido.sabor"
+            />
+            <label for="abacaxi" class="input-label">Abacaxi</label>
+          </div>
+        </div>
+        <div class="tamanho">
+          <div>
+            <input
+              type="radio"
+              name="tamanho"
+              value="25"
+              id="25"
+              [(ngModel)]="itemPedido.tamanho"
+            />
+            <label for="25" class="input-label">25 fatias</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="tamanho"
+              value="30"
+              id="30"
+              [(ngModel)]="itemPedido.tamanho"
+            />
+            <label for="30" class="input-label">30 fatias</label>
+          </div>
+          <div>
+            <input
+              type="radio"
+              name="tamanho"
+              value="50"
+              id="50"
+              [(ngModel)]="itemPedido.tamanho"
+            />
+            <label for="50" class="input-label">50 fatias</label>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <label for="tel">Telefone:</label>
-    <input type="tel" id="tel" />
-    <label for="tel-c">Confirme o telefone:</label>
-    <input type="tel" id="tel-c" />
-
-    <select name="products" id="products">
-      <option value="">Escolha seu bolo</option>
-      <optgroup label="Bolos Caseiros">
-        <option value="">Laranja</option>
-        <option value="">Cenoura</option>
-        <option value="">Maçã com Canela</option>
-      </optgroup>
-      <optgroup label="Bolos Confeitados">
-        <option value="">No Acetato</option>
-        <option value="">Com Chantininho</option>
-      </optgroup>
-    </select>
-    <button id="btnProduto" type="button" (click)="addProduct()">
+    <button
+      id="btnProduto"
+      type="button"
+      class="btn"
+      (click)="adicionaProduto(quantidadePedidos)"
+    >
       Incluir
     </button>
   </form>
-  <div *ngIf="order.length > 0">
-    <div *ngFor="let orderItem of order">
-      <app-item-pedido [orderItem]="orderItem"></app-item-pedido>
+  <div *ngIf="pedido.itensPedido.length > 0">
+    <div class="itens-pedido" *ngFor="let itemPedido of pedido.itensPedido">
+      <app-item-pedido [itemPedido]="itemPedido"></app-item-pedido>
     </div>
   </div>
+  <button id="btnPedido" type="button" class="btn" (click)="registraPedido()">
+    Fazer Pedido
+  </button>
 </section>
