@@ -1,0 +1,24 @@
+.item-pedido {
+  background-color: #ffb3d9;
+  border-radius: 8px;
+  color: #663300;
+  font-size: 1.25rem;
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  width: 50%;
+}
+
+.btn {
+  background-color: #663300;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Alkatra", cursive;
+  font-size: 1.125rem;
+  padding: 0.125rem 0.5rem;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #331a00;
+  color: #ffb3d9;
+}

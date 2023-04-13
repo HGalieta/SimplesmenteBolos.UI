@@ -1,6 +1,6 @@
 import { PedidoService } from './../encomendas/pedido.service';
 import { Component, Input, OnInit } from '@angular/core';
-import { OrderItem } from '../encomendas/itemPedido';
+import { ItemPedido } from '../encomendas/itemPedido';
 import { Router } from '@angular/router';
 
 @Component({
@@ -9,21 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./item-pedido.component.css'],
 })
 export class ItemPedidoComponent implements OnInit {
-  @Input() orderItem: OrderItem = {
+  @Input() itemPedido: ItemPedido = {
     id: 0,
-    tipo: 'Caseiro',
-    sabor: 'Limão',
-    tamanho: 30,
+    tipo: '',
+    sabor: '',
+    tamanho: 0,
   };
 
   constructor(private service: PedidoService, private router: Router) {}
 
   ngOnInit(): void {}
 
-  removeProduct(event: any, id: any) {
-    this.service.removeItem(id).subscribe(() => {
-      this.router.navigate(['/encomendas']);
-    });
+  removeProduto(event: any, id: any) {
+    sessionStorage.removeItem(id);
     event.target.parentElement.remove();
   }
 }
