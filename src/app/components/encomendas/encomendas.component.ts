@@ -1,6 +1,8 @@
 import { PedidoService } from './pedido.service';
 import { Component, OnInit } from '@angular/core';
-import { OrderItem } from './itemPedido';
+import { ItemPedido } from './itemPedido';
+import { Cliente } from './cliente';
+import { Pedido } from './pedido';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-encomendas',
@@ -8,25 +10,57 @@ import { Router } from '@angular/router';
   styleUrls: ['./encomendas.component.css'],
 })
 export class EncomendasComponent implements OnInit {
-  orderItem: OrderItem = {
-    tipo: 'Caseiro',
-    sabor: 'Laranja',
-    tamanho: 20,
+  itemPedido: ItemPedido = {
+    id: 0,
+    tipo: '',
+    sabor: '',
+    tamanho: 0,
+  };
+  cliente: Cliente = {
+    nome: '',
+    telefone: '',
+    email: '',
   };
 
-  order: OrderItem[] = [];
+  quantidadePedidos: number = 0;
+  pedido: Pedido = {
+    cliente: {
+      nome: '',
+      telefone: '',
+      email: '',
+    },
+    itensPedido: [],
+  };
 
   constructor(private service: PedidoService, private router: Router) {}
 
   ngOnInit(): void {
-    this.service.listOrder().subscribe((order) => {
-      this.order = order;
-    });
+    sessionStorage.clear();
   }
 
-  addProduct() {
-    this.service.addItemToOrder(this.orderItem).subscribe(() => {
-      this.router.navigate(['/encomendas']);
+  adicionaProduto(quantidade: number) {
+    this.quantidadePedidos = quantidade + 1;
+    this.itemPedido.id = this.quantidadePedidos;
+    sessionStorage.setItem(
+      `${this.quantidadePedidos}`,
+      JSON.stringify(this.itemPedido)
+    );
+    this.pedido.itensPedido.push(
+      JSON.parse(sessionStorage.getItem(`${this.quantidadePedidos}`) || '')
+    );
+  }
+
+  registraPedido() {
+    this.pedido.itensPedido = [];
+    Object.keys(sessionStorage).forEach((id) => {
+      this.pedido.itensPedido.push(
+        JSON.parse(sessionStorage.getItem(id) || '')
+      );
     });
+    console.log(this.pedido);
+    this.service.realizaPedido(this.pedido).subscribe(() => {
+      this.router.navigate(['/confirmacao']);
+    });
+    sessionStorage.clear();
   }
 }

@@ -1,4 +1,4 @@
-export interface OrderItem {
+export interface ItemPedido {
   id?: number;
   tipo: string;
   sabor: string;
