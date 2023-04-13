@@ -2,9 +2,13 @@
 
 Projeto desenvolvido por Henrique Galieta (<https://linkedin.com/in/henriquegalieta>).
 
+Este projeto consiste no site Simplesmente Bolos de encomendas de bolos, onde o cliente realiza seu pedido e recebe uma confirmação por email com a lista de produtos encomendados.
+
 ## Subindo o Servidor
 
-Rode o comando `ng serve` para subir o servidor de desenvolvimento e navegue para `http://localhost:4200/`. Alternativamente, rode o comando `ng serve -o` e o projeto abrirá diretamente em seu navegador padrão.
+Rode o comando `ng serve` para subir o servidor de desenvolvimento e navegue para `http://localhost:4200/`.
+
+Alternativamente, rode o comando `ng serve -o` e o projeto abrirá diretamente em seu navegador padrão.
 
 ## Consumo de API
 
